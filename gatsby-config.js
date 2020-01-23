@@ -35,12 +35,14 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'uploads',
             },
           },
+
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -50,6 +52,7 @@ module.exports = {
               maxWidth: 2048,
             },
           },
+
           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
@@ -59,12 +62,14 @@ module.exports = {
         ],
       },
     },
+
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
